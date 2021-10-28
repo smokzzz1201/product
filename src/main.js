@@ -10,7 +10,8 @@ import store from './store.js'
 
 const routes = [
     { path: '/', component: ProductsList },
-    { path: '/product/:id', component: ProductInfo }
+    { path: '/product/:id', component: ProductInfo },
+    { path: '/cart', component: Cart }
 ]
 
 const router = new VueRouter({

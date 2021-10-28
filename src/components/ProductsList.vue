@@ -24,34 +24,12 @@
         </div>
 
         <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="">
-            Корзина ({{ $store.state.cartCount }})
-        </a>
-
-        <div v-if="$store.state.cart.length > 0" class="navbar-dropdown is-boxed is-right">
-            <a v-for="item in $store.state.cart"
-                :key="item.id"
-                class="navbar-item"
-                href=""
-            >
-              <img v-bind:src="item.src" style="width:150px;"> <br>
-          
-             {{ item.item }} x{{ item.quantity }} - ${{ item.totalPrice }} <br> 
-                 <pre> </pre>
-            </a>
-<br>
             
-                Итого: $ {{ totalPrice() }} 
-          
+    <router-link v-bind:to="'/cart/'">
+            Корзина ({{ $store.state.cartCount }})
+       </router-link>
+        
 
-            <hr class="navbar-divider">
-        </div>
-
-        <div v-else class="navbar-dropdown is-boxed is-right">
-            <a class="navbar-item" href="">
-                Корзина пуста
-            </a>
-        </div>
     </div>
     </div>
 
